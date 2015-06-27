@@ -11,6 +11,6 @@ angular.module('birraApp')
     return {
       templateUrl: 'views/navigation-header.html',
       restrict: 'E',
-      controller: 'controllers/navigation-header.js'
+      controller: 'NavigationHeaderCtrl'
     };
   });

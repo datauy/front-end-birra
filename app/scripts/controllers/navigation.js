@@ -9,5 +9,5 @@
  */
 angular.module('birraApp')
   .controller('NavigationCtrl', function ($scope,$routeParams) {
-    
+      
   });
