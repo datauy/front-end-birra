@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name birraApp.controller:MainCtrl
+ * @name birraApp.controller:EventsCtrl
  * @description
- * # MainCtrl
+ * # EventsCtrl
  * Controller of the birraApp
  */
 angular.module('birraApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('EventsCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
