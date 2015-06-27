@@ -27,6 +27,26 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/beers', {
+        templateUrl: 'views/beers.html',
+        controller: 'BeersCtrl'
+      })
+      .when('/navigation', {
+        templateUrl: 'views/navigation.html',
+        controller: 'NavigationCtrl'
+      })
+      .when('/notifications', {
+        templateUrl: 'views/notifications.html',
+        controller: 'NotificationsCtrl'
+      })
+      .when('/events', {
+        templateUrl: 'views/events.html',
+        controller: 'EventsCtrl'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
