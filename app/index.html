@@ -10,6 +10,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -17,9 +18,9 @@
     <!-- endbuild -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,300" />
   </head>
-  <body ng-app="birraApp">
-        <div ng-view=""></div>
-        <navigation></navigation>
+  <body ng-app="birraApp" class="flex-container">
+    <div ng-view="" class="flex-container"></div>
+    <navigation></navigation>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
