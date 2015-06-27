@@ -9,9 +9,5 @@
  */
 angular.module('birraApp')
   .controller('BeersCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
   });

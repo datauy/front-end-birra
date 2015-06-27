@@ -21,7 +21,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/navigation.html',
-        controller: 'MainCtrl'
+        controller: 'NavigationCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -46,6 +46,10 @@ angular
       .when('/filter', {
         templateUrl: 'views/filter.html',
         controller: 'FilterCtrl'
+      })
+      .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MapCtrl'
       })
       .otherwise({
         redirectTo: '/'
