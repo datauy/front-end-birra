@@ -8,6 +8,8 @@
  * Controller of the birraApp
  */
 angular.module('birraApp')
-  .controller('NavigationCtrl', function ($scope,$routeParams) {
-    
+  .controller('NavigationCtrl', function ($scope,$location) {
+      $scope.goToView = function(view) {
+          $location.path(view);
+      };
   });

@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,300" />
   </head>
   <body ng-app="birraApp" class="flex-container">
-    <div ng-view="" class="flex-container"></div>
+    <navigation-header></navigation-header>
+    <div class="flex__unit-1" ng-view=""></div>
     <navigation></navigation>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -46,7 +47,10 @@
     <script src="scripts/services/brewerie.js"></script>
     <script src="scripts/services/beer.js"></script>
     <script src="scripts/services/venue.js"></script>
-	<script src="scripts/controllers/map.js"></script>
+	  <script src="scripts/controllers/map.js"></script>
+    <script src="scripts/directives/navigation.js"></script>
+    <script src="scripts/directives/navigation-header.js"></script>
+    <script src="scripts/controllers/navigation-header.js"></script>
     <!-- endbuild -->
 </body>
 </html>
