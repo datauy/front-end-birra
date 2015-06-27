@@ -38,10 +38,30 @@ main {
 
 /* UTILS */
 
+/* DISPLAY */
+
+.flexible {
+  display: flex;
+}
+
+.flexible__center {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex__unit-1 {
+  flex: 1;
+}
+
 /* TEXT */
 
 .text-center {
   text-align: center;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Spacing */
