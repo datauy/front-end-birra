@@ -32,6 +32,42 @@ footer.navbar {
   margin-bottom: -0.2em;
 }
 
+footer a {
+  color: #353535;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a.active {
+  color: white;
+}
+
+footer a svg {
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+  width: 40px;
+}
+
+footer a svg.fill {
+  fill: #353535;
+}
+
+footer a svg.stroke {
+  stroke: #353535;
+}
+
+footer a:hover svg.fill,
+footer a.active svg.fill {
+  fill: #fff;
+}
+
+footer a:hover svg.stroke,
+footer a.active svg.stroke {
+  stroke: #fff;
+}
+
 main {
   flex: 1;
 }
