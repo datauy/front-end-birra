@@ -20,7 +20,7 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/navigation.html',
         controller: 'MainCtrl'
       })
       .when('/about', {
@@ -30,10 +30,6 @@ angular
       .when('/beers', {
         templateUrl: 'views/beers.html',
         controller: 'BeersCtrl'
-      })
-      .when('/navigation', {
-        templateUrl: 'views/navigation.html',
-        controller: 'NavigationCtrl'
       })
       .when('/notifications', {
         templateUrl: 'views/notifications.html',
