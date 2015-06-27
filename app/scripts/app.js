@@ -27,10 +27,6 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/beers', {
-        templateUrl: 'views/beers.html',
-        controller: 'BeersCtrl'
-      })
       .when('/notifications', {
         templateUrl: 'views/notifications.html',
         controller: 'NotificationsCtrl'
@@ -38,10 +34,6 @@ angular
       .when('/events', {
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
       })
       .when('/filter', {
         templateUrl: 'views/filter.html',
