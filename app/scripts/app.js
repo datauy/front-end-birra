@@ -34,11 +34,7 @@ angular
       .when('/events', {
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl'
-      })
-      .when('/filter', {
-        templateUrl: 'views/filter.html',
-        controller: 'FilterCtrl'
-      })
+      })    
       .when('/map', {
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
