@@ -8,6 +8,6 @@
  * Controller of the birraApp
  */
 angular.module('birraApp')
-  .controller('BeersCtrl', function ($scope) {
-
+  .controller('BeersCtrl', function ($scope,Beer) {
+        
   });

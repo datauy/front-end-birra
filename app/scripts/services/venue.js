@@ -9,5 +9,9 @@
  */
 angular.module('birraApp')
   .factory('Venue', function ($resource) {
-    return $resource('/api/v1/venues/:id');
+      return {
+        get : function() {
+          return $resource('/api/v1/venues/:id');
+        }
+      }
   });
