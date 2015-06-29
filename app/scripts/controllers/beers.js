@@ -11,7 +11,7 @@ angular.module('birraApp')
   .controller('BeersCtrl', function ($scope,Beer) {
     $scope.beers = [{
       'id' : 1,
-      'name' : 'Cerveza',
+      'name' : 'Cerveza 3',
       'description' : 'Es una cerveza muy buena',
       'image' : 'http://www.beergeeks.cl/wordpress/wp-content/uploads/2013/05/logo.jpg'
     },{

@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'facebook'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -34,7 +35,7 @@ angular
       .when('/events', {
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl'
-      })    
+      })
       .when('/map', {
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
@@ -42,4 +43,8 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+      /**
+       * For now is showing a error because we don't have a facebook app. @antero
+       */
+       //FacebookProvider.init('YOUR_APP_ID');Ó
   });
