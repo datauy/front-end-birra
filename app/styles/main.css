@@ -1,9 +1,16 @@
 html {
   box-sizing: border-box;
+  /* http://blog.typekit.com/2014/02/05/kerning-on-the-web/ */
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  /* http://maximilianhoffmann.com/posts/better-font-rendering-on-osx */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /* http://www.johanbrook.com/articles/native-style-momentum-scrolling-to-arrive-in-ios-5/ */
+  -webkit-overflow-scrolling: touch;
 }
-a[ng-click]{
-    cursor: pointer;
-}
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -11,6 +18,15 @@ a[ng-click]{
 body {
   color: #353535;
   font-family: 'Roboto', sans-serif;
+}
+
+a {
+  /* http://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/ */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a[ng-click]{
+  cursor: pointer;
 }
 
 .flex-container {
@@ -34,39 +50,53 @@ footer.navbar {
   margin-bottom: -0.2em;
 }
 
-footer a {
+.nav-btn {
   color: #353535;
+  display: block;
+  font-size: .9em;
+  padding: 10px 0;
   text-align: center;
   text-decoration: none;
 }
 
-footer a:hover,
-footer a.active {
+.nav-btn:hover,
+.nav-btn.active {
   color: white;
 }
 
-footer a svg {
+.nav-btn svg {
   display: block;
-  height: 50px;
-  margin: 0 auto;
-  width: 40px;
+  height: 35px;
+  margin: 0 auto 5px;
+  width: 28px;
 }
 
-footer a svg.fill {
+@media (min-width: 768px) {
+  .nav-btn {
+    font-size: 1em;
+  }
+
+  .nav-btn svg {
+    height: 50px;
+    width: 40px;
+  }
+}
+
+.nav-btn .fill {
   fill: #353535;
 }
 
-footer a svg.stroke {
+.nav-btn .stroke {
   stroke: #353535;
 }
 
-footer a:hover svg.fill,
-footer a.active svg.fill {
+.nav-btn:hover .fill,
+.nav-btn.active .fill {
   fill: #fff;
 }
 
-footer a:hover svg.stroke,
-footer a.active svg.stroke {
+.nav-btn:hover .stroke,
+.nav-btn.active .stroke {
   stroke: #fff;
 }
 
@@ -110,4 +140,9 @@ footer a.active svg.stroke {
 
 .u-paddingAs {
   padding: 10px;
+}
+
+.u-paddingVs {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
