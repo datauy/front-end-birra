@@ -8,16 +8,9 @@
  * Controller of the birraApp
  */
 angular.module('birraApp')
-  .controller('BeersCtrl', function ($scope,Beer) {
-    $scope.beers = [{
-      'id' : 1,
-      'name' : 'Cerveza 3',
-      'description' : 'Es una cerveza muy buena',
-      'image' : 'http://www.beergeeks.cl/wordpress/wp-content/uploads/2013/05/logo.jpg'
-    },{
-      'id': 2,
-      'name' : 'Cerveza 2',
-      'description' : 'Es una cerveza muy mala',
-      'image' : 'http://www.cervezadeargentina.com.ar/cervezas/images/VALHALLA_logo_jpg.gif'
-    }];
+  .controller('BeersCtrl', function ($scope,$location, $anchorScroll,Beer) {
+    $scope.beers = [];
+    Beer.query(function(beers){
+        $scope.beers = beers;
+    });
   });

@@ -9,9 +9,5 @@
  */
 angular.module('birraApp')
   .factory('Venue', function ($resource) {
-      return {
-        get : function() {
-          return $resource('/api/v1/venues/:id');
-        }
-      }
+          return $resource('http://birra.herokuapp.com/api/v1/venues/:id');
   });
