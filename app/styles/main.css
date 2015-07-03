@@ -29,32 +29,32 @@ a[ng-click]{
   cursor: pointer;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .navbar {
   background-color: #FFC107;
   border: #353535 solid;
-  border-width: 0.2em 0;
-  min-height: 4em;
+  border-width: 0;
 }
 
 header.navbar {
-  margin-top: -0.2em;
+  border-bottom-width: .2em;
+  height: 4em;
 }
 
 footer.navbar {
-  margin-bottom: -0.2em;
+  border-top-width: .2em;
+  height: 6em;
+}
+
+main {
+  overflow: auto;
+  /* viewport height - (header navbar height + footer navbar height) */
+  height: calc(100vh - 10em);
 }
 
 .nav-btn {
   color: #353535;
   display: block;
   font-size: .9em;
-  padding: 10px 0;
   text-align: center;
   text-decoration: none;
 }
