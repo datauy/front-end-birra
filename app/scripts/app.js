@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'facebook'
+    'facebook',
+    'leaflet-directive'
   ])
   .config(function ($routeProvider) {
     $routeProvider

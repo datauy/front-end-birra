@@ -1,5 +1,5 @@
 <ul>
-  <li ng-repeat = 'beer in beers'>
-    <beer  id="beer.id" name = "beer.name" description = "beer.description" image = "beer.image"></beer>
+  <li style='overflow: scroll' ng-repeat = 'beer in beers | beerFilter:rows:offset'>
+    <beer  id="beer.id" name = "beer.brand" description = "beer.color" image = "beer.image"></beer>
   </li>
 </ul>
