@@ -1,0 +1,8 @@
+
+<ul>
+  <li ng-repeat = "brewere in breweries">
+    <h1>{{brewerie.name}}</h1>
+    <ul>
+        <beer ng-repeat = "beer in brewere.beers" id="beer.id" name="beer.style" description="beer.size" image="beer.color">
+    </ul>
+  </li>

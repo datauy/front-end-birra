@@ -12,4 +12,7 @@ angular.module('birraApp')
       $scope.goToView = function(view) {
           $location.path(view);
       };
+      $scope.isActive = function(route) {
+        return route == $location.path();
+      }
   });

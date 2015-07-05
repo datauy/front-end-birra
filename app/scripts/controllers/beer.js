@@ -9,5 +9,4 @@
  */
 angular.module('birraApp')
   .controller('BeerCtrl', function ($scope) {
-    
   });

@@ -21,9 +21,9 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/beers.html',
-        controller: 'BeersCtrl'
+      .when('/breweries', {
+        templateUrl: 'views/brewerie.html',
+        controller: 'BrewerieCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -42,7 +42,7 @@ angular
         controller: 'MapCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/map'
       });
       /**
        * For now is showing a error because we don't have a facebook app. @antero
