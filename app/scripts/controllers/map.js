@@ -12,6 +12,7 @@ angular.module('birraApp')
 
     //Render map
     angular.extend($scope, {
+      selectedMarker: null,
       layers: {
         baselayers: {
           osm: {
@@ -35,46 +36,51 @@ angular.module('birraApp')
       defaults: {
         scrollWheelZoom: false
       },
-
-      breweryIcon: {
-        iconUrl: 'images/pin-brewery.svg',
-        iconSize: [38, 49],
-        iconAnchor:   [19, 42],
-      },
-
-      venueIcon: {
-        iconUrl: 'images/pin-venue.svg',
-        iconSize: [38, 49],
-        iconAnchor:   [19, 42],
-      },
     });
+
+    var icons = {
+      'brewery': 'images/pin-brewery.svg',
+      'Brewpub': 'images/pin-bar.svg',
+      'Tienda': 'images/pin-store.svg',
+      'Bar': 'images/pin-bar.svg',
+      'Restaurant': 'images/pin-bar.svg',
+      'default': 'images/pin-bar.svg',
+    };
+
+    function addMarker(model, type, iconUrl) {
+      if (model.lat !== null && model.lng !== null) {
+        $scope.markers[type + '_' + model.id] = {
+          lat: parseFloat(model.lat),
+          lng: parseFloat(model.lng),
+          model: model,
+          icon: {
+            iconUrl: iconUrl,
+            iconSize: [38, 49],
+            iconAnchor:   [19, 42],
+          },
+          type: type,
+        };
+      }
+    }
 
     //Getting breweries
     Brewerie.query(function(breweries) {
       angular.forEach(breweries, function(brewery) {
-        if (brewery.lat !== null && brewery.lng !== null) {
-          $scope.markers['brewery_' + brewery.id] = {
-            lat: parseFloat(brewery.lat),
-            lng: parseFloat(brewery.lng),
-            model: brewery,
-            message: brewery.name,
-            icon: $scope.breweryIcon,
-          };
-        }
+        addMarker(brewery, 'brewery', icons.brewery);
       });
     });
 
     Venue.query(function(venues) {
       angular.forEach(venues, function(venue) {
-        if (venue.lat !== null && venue.lng !== null) {
-          $scope.markers['venue_' + venue.id] = {
-            lat: parseFloat(venue.lat),
-            lng: parseFloat(venue.lng),
-            model: venue,
-            message: venue.name,
-            icon: $scope.venueIcon,
-          };
-        }
+        addMarker(venue, 'venue', icons[venue.venue_type] || icons.default);
       });
+    });
+
+    $scope.$on('leafletDirectiveMarker.click', function(event, args){
+      $scope.selectedMarker = args.model;
+    });
+
+    $scope.$on('leafletDirectiveMap.click', function(){
+      $scope.selectedMarker = null;
     });
   });
