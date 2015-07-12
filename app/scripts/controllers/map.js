@@ -8,7 +8,7 @@
  * Controller of the birraApp
  */
 angular.module('birraApp')
-  .controller('MapCtrl', function ($scope, Brewerie, leafletEvents, leafletData) {
+  .controller('MapCtrl', function ($scope, Brewerie, Venue, leafletEvents) {
 
     //Render map
     angular.extend($scope, {
@@ -26,7 +26,7 @@ angular.module('birraApp')
         lng: -56.18,
         zoom: 12
       },
-      markers: [],
+      markers: {},
       events: {
         markers: {
           enable: leafletEvents.getAvailableMarkerEvents(),
@@ -34,24 +34,47 @@ angular.module('birraApp')
       },
       defaults: {
         scrollWheelZoom: false
-      }
+      },
+
+      breweryIcon: {
+        iconUrl: 'images/pin-brewery.svg',
+        iconSize: [38, 49],
+        iconAnchor:   [19, 42],
+      },
+
+      venueIcon: {
+        iconUrl: 'images/pin-venue.svg',
+        iconSize: [38, 49],
+        iconAnchor:   [19, 42],
+      },
     });
 
     //Getting breweries
     Brewerie.query(function(breweries) {
-      var markers = {};
-
-      angular.forEach(breweries, function(brewery, key) {
+      angular.forEach(breweries, function(brewery) {
         if (brewery.lat !== null && brewery.lng !== null) {
-          markers["brewery_" + brewery.id] = {
+          $scope.markers['brewery_' + brewery.id] = {
             lat: parseFloat(brewery.lat),
             lng: parseFloat(brewery.lng),
             model: brewery,
             message: brewery.name,
+            icon: $scope.breweryIcon,
           };
-        };
+        }
       });
+    });
 
-      $scope.markers = markers;
+    Venue.query(function(venues) {
+      angular.forEach(venues, function(venue) {
+        if (venue.lat !== null && venue.lng !== null) {
+          $scope.markers['venue_' + venue.id] = {
+            lat: parseFloat(venue.lat),
+            lng: parseFloat(venue.lng),
+            model: venue,
+            message: venue.name,
+            icon: $scope.venueIcon,
+          };
+        }
+      });
     });
   });
