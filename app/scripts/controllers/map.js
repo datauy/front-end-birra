@@ -13,15 +13,6 @@ angular.module('birraApp')
     //Render map
     angular.extend($scope, {
       selectedMarker: null,
-      layers: {
-        baselayers: {
-          osm: {
-            name: 'OpenStreetMap',
-            url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-            type: 'xyz'
-          }
-        }
-      },
       montevideo: {
         lat: -34.90,
         lng: -56.18,
