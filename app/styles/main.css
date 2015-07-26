@@ -211,3 +211,20 @@ ul#events li {
 
   padding: 10px;
 }
+
+svg.info-logo {
+  width: auto;
+  height: 100px;
+  margin-left: auto;
+  margin-right:auto;
+  display:block;
+}
+
+ul.page-info {
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.page-info h1 {
+  text-align: center;
+}
