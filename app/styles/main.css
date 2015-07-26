@@ -226,5 +226,17 @@ ul.page-info {
 }
 
 .page-info h1 {
+  font-size: 21px;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
   text-align: center;
+}
+
+.page-info p {
+  line-height: 27px;
+}
+
+.page-info a {
+  font-weight: bold;
+  color: #000;
 }
