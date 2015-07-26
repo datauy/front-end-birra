@@ -19,7 +19,9 @@ angular
     'facebook',
     'leaflet-directive'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,FacebookProvider) {
+    var appId = '1632863393659213';
+    FacebookProvider.init(appId);
     $routeProvider
       .when('/breweries', {
         templateUrl: 'views/brewerie.html',
@@ -44,8 +46,4 @@ angular
       .otherwise({
         redirectTo: '/map'
       });
-      /**
-       * For now is showing a error because we don't have a facebook app. @antero
-       */
-       //FacebookProvider.init('YOUR_APP_ID');Ó
   });
