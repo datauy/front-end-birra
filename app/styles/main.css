@@ -214,7 +214,7 @@ ul#events li {
 
 svg.info-logo {
   width: auto;
-  height: 100px;
+  height: 60px;
   margin-left: auto;
   margin-right:auto;
   display:block;
@@ -226,5 +226,17 @@ ul.page-info {
 }
 
 .page-info h1 {
+  font-size: 21px;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
   text-align: center;
+}
+
+.page-info p {
+  line-height: 27px;
+}
+
+.page-info a {
+  font-weight: bold;
+  color: #000;
 }

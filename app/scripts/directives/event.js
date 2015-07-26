@@ -13,7 +13,6 @@ angular.module('birraApp')
       restrict: 'E',
       scope : {
         event: '=event',
-      },
-      controller: 'EventsCtrl'
+      }
     };
   });

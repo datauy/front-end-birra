@@ -12,10 +12,7 @@ angular.module('birraApp')
       templateUrl: 'views/beer.html',
       restrict: 'E',
       scope : {
-        name: '=name',
-        id : '=id',
-        description : '=description',
-        image : '=image'
+        beer : "=beer"
       },
       controller: 'BeerCtrl'
     };
