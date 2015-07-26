@@ -232,6 +232,10 @@ ul.page-info {
   text-align: center;
 }
 
+.page-info h2 {
+  font-size: 18px;
+}
+
 .page-info p {
   line-height: 27px;
 }
