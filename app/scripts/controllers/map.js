@@ -16,7 +16,7 @@ angular.module('birraApp')
       montevideo: {
         lat: -34.90,
         lng: -56.18,
-        zoom: 12
+        zoom: 15
       },
       markers: {},
       events: {
