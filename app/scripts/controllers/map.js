@@ -32,30 +32,30 @@ angular.module('birraApp')
     var icons = {
       brewery: {
         default: {
-          normal: 'images/pin-brewery.svg',
-          selected: 'images/pin-selected.svg',
+          normal: 'images/pin-brewery.png',
+          selected: 'images/pin-brewery-active.png',
         }
       },
       venue: {
         Brewpub: {
-          normal: 'images/pin-bar.svg',
-          selected: 'images/pin-selected.svg'
+          normal: 'images/pin-bar.png',
+          selected: 'images/pin-bar-active.png'
         },
         Tienda: {
-          normal: 'images/pin-store.svg',
-          selected: 'images/pin-selected.svg'
+          normal: 'images/pin-store.png',
+          selected: 'images/pin-store-active.png'
         },
         Bar: {
-          normal: 'images/pin-bar.svg',
-          selected: 'images/pin-selected.svg'
+          normal: 'images/pin-bar.png',
+          selected: 'images/pin-bar-active.png'
         },
         Restaurant: {
-          normal: 'images/pin-bar.svg',
-          selected: 'images/pin-selected.svg'
+          normal: 'images/pin-bar.png',
+          selected: 'images/pin-bar-active.png'
         },
         default: {
-          normal: 'images/pin-bar.svg',
-          selected: 'images/pin-selected.svg'
+          normal: 'images/pin-bar.png',
+          selected: 'images/pin-bar-selected.png'
         },
       },
     };
