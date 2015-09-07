@@ -357,6 +357,9 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          src: 'CNAME',
+          dest: '<%= yeoman.dist %>/CNAME'
         }]
       },
       styles: {
@@ -388,6 +391,14 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'dist',
+        message: 'gh-pages deploy'
+      },
+      src: ['**']
     }
   });
 
@@ -442,5 +453,10 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', 'build and push to origin/gh-pages', [
+    'build',
+    'gh-pages'
   ]);
 };
